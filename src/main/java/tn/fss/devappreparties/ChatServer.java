@@ -9,7 +9,6 @@ import java.nio.charset.StandardCharsets;
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 
-/** Serveur de discussion UDP : chaque client est identifie par son adresse et son port. */
 public final class ChatServer {
     public static final int DEFAULT_PORT = 1234;
     private static final int MAX_DATAGRAM_SIZE = 65_507;
@@ -43,7 +42,6 @@ public final class ChatServer {
                 SocketAddress sender = packet.getSocketAddress();
                 System.out.printf("[%s] %s%n", sender, message);
 
-                // L'etape 2 du TP consiste seulement a afficher le message recu.
                 if ("/quit".equalsIgnoreCase(message.trim())) {
                     continue;
                 }

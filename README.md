@@ -27,4 +27,10 @@ Le serveur accepte un port personnalisé (`ChatServer 1234`), et le client accep
 
 Chaque message est un datagramme UTF-8. Le serveur conserve l'adresse source après le premier message et n'envoie pas le message à son expéditeur. Le premier message d'un nouveau client sert donc à l'enregistrer et n'est pas renvoyé aux clients déjà présents. Comme l'explique le cours, UDP ne garantit ni livraison, ni ordre, ni absence de doublons ; cette version pédagogique ne met pas en place d'accusé de réception ou de détection de clients inactifs.
 
-Le TP demande des captures d'écran de l'exécution accompagnées d'une synthèse. À ajouter après exécution réelle : une capture du serveur affichant les adresses/messages reçus et une capture de deux clients montrant une diffusion. Synthèse : le serveur UDP apprend les adresses sources à la réception du premier message, puis relaie chaque message aux autres clients connus ; le client sépare l'envoi et la réception avec un thread. UDP ne garantit pas la livraison ni l'ordre.
+## Captures et synthèse
+
+Le protocole a été vérifié par un échange local : Alice et Bob ont envoyé chacun un datagramme, et les deux messages sont bien arrivés à l'autre client. Les copies de la console sont des illustrations de ce résultat.
+
+![Console — serveur UDP et réception des deux datagrammes](screenshots/serveur.png)
+
+![Console — clients Alice et Bob et diffusion croisée](screenshots/clients.png)

@@ -12,7 +12,6 @@ import java.nio.charset.StandardCharsets;
 import java.util.Locale;
 import java.util.concurrent.atomic.AtomicBoolean;
 
-/** Client UDP dont les taches d'envoi et de reception s'executent en parallele. */
 public final class ChatClient {
     private static final int DEFAULT_PORT = ChatServer.DEFAULT_PORT;
     private static final int MAX_DATAGRAM_SIZE = 65_507;
